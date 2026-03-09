@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solignat Traiteur — Traiteur proche de Clermont-Ferrand | Puy-de-Dôme (63)</title>
+<meta name="description" content="Solignat Traiteur, traiteur à Chanat-la-Mouteyre (63) proche de Clermont-Ferrand. Particuliers, mariages, entreprises, associations. Cuisine traditionnelle auvergnate et créative.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--orange:#EB8800;
+--orange-dark:#C47200;
+--noir:#1A0A0A;
+--creme:#FFF9F2;
+--creme-dark:#F5EDE0;
+--gris:#4A4A4A;
+--blanc:#FFFFFF;
+--brun:#94846E;
+--brun-clair:#B0A08A;
+}
+body{font-family:'Source Sans 3',sans-serif;color:var(--gris);background:var(--creme);line-height:1.7}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--noir);line-height:1.3}
+
+/* HEADER */
+.header{background:var(--noir);padding:14px 0;position:fixed;top:0;width:100%;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.4)}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.header-logo{display:flex;align-items:center;gap:14px}
+.header-logo img{height:52px;width:auto}
+.header-name{color:var(--blanc);font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600}
+.header-name span{display:block;font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:300;color:var(--orange);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+nav a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;margin-left:26px;transition:color 0.3s;font-weight:400}
+nav a:hover{color:var(--orange)}
+
+/* HERO */
+.hero{margin-top:80px;position:relative;height:85vh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;background:url('img/buffet-charcuterie.jpg') center/cover no-repeat;filter:brightness(0.3)}
+.hero-content{position:relative;z-index:1;text-align:center;max-width:750px;padding:0 24px}
+.hero-tagline{color:var(--orange);font-family:'Source Sans 3',sans-serif;font-size:0.8rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.hero h1{color:var(--blanc);font-size:3rem;font-weight:700;margin-bottom:18px}
+.hero h1 em{color:var(--orange);font-style:italic}
+.hero-sub{color:rgba(255,249,242,0.85);font-size:1.1rem;font-weight:300;max-width:550px;margin:0 auto 30px;line-height:1.8}
+.hero-cta{display:inline-block;background:var(--orange);color:var(--blanc);padding:14px 36px;font-size:1rem;font-weight:600;text-decoration:none;border-radius:4px;transition:all 0.3s;letter-spacing:0.5px}
+.hero-cta:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 25px rgba(235,136,0,0.4)}
+.hero-badge{margin-top:30px;color:rgba(255,249,242,0.5);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.container{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:2rem;margin-bottom:12px}
+.section-title .line{width:60px;height:3px;background:var(--orange);margin:0 auto 16px}
+.section-title p{color:var(--gris);font-size:1.05rem;font-weight:300;max-width:600px;margin:0 auto}
+
+/* PRESENTATION */
+.presentation{background:var(--blanc)}
+.pres-content{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:center}
+.pres-img{text-align:center}
+.pres-img img{max-width:200px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+.pres-text .line{width:50px;height:3px;background:var(--orange);margin-bottom:18px}
+.pres-text h2{font-size:1.8rem;margin-bottom:16px}
+.pres-text p{font-size:1rem;font-weight:300;margin-bottom:14px;line-height:1.8}
+.pres-text strong{color:var(--noir);font-weight:600}
+.pres-badges{display:flex;gap:16px;margin-top:20px;align-items:center}
+.pres-badge{background:var(--creme);padding:10px 18px;border-radius:6px;font-size:0.8rem;font-weight:600;color:var(--orange);text-transform:uppercase;letter-spacing:1px;border:1px solid rgba(235,136,0,0.15)}
+
+/* PRESTATIONS */
+.prestations{background:var(--creme)}
+.prest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.prest-card{background:var(--blanc);border-radius:8px;padding:35px 25px;text-align:center;border:1px solid rgba(0,0,0,0.05);transition:all 0.3s}
+.prest-card:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(0,0,0,0.06)}
+.prest-icon{width:56px;height:56px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.prest-icon svg{width:26px;height:26px;fill:var(--blanc)}
+.prest-card h3{font-size:1.1rem;margin-bottom:10px}
+.prest-card p{font-size:0.9rem;font-weight:300;line-height:1.7}
+
+/* GALERIE */
+.galerie{background:var(--noir);color:var(--creme);padding:80px 24px}
+.galerie h2{color:var(--creme)}
+.galerie .line{background:var(--orange)}
+.galerie .section-title p{color:rgba(255,249,242,0.7)}
+.gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.gal-item{border-radius:8px;overflow:hidden;position:relative}
+.gal-item img{width:100%;height:280px;object-fit:cover;display:block;transition:transform 0.4s}
+.gal-item:hover img{transform:scale(1.03)}
+.gal-caption{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(26,10,10,0.85));color:var(--blanc);font-size:0.9rem;font-weight:300}
+.gal-caption strong{font-weight:600;display:block;color:var(--orange);font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+
+/* EQUIPE */
+.equipe{background:var(--blanc)}
+.equipe-content{display:grid;grid-template-columns:280px 1fr;gap:50px;align-items:center}
+.equipe-photo img{width:100%;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.1)}
+.equipe-text .line{width:50px;height:3px;background:var(--orange);margin-bottom:18px}
+.equipe-text h2{font-size:1.8rem;margin-bottom:16px}
+.equipe-text p{font-size:1rem;font-weight:300;margin-bottom:14px;line-height:1.8}
+.equipe-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.equipe-stat{text-align:center;padding:18px 10px;background:var(--creme);border-radius:8px}
+.equipe-stat .number{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--orange);font-weight:700}
+.equipe-stat .label{font-size:0.75rem;color:var(--gris);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+
+/* EMPORTER */
+.emporter{background:var(--creme-dark)}
+.emporter-content{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+.emporter-text .line{width:50px;height:3px;background:var(--orange);margin-bottom:18px}
+.emporter-text h2{font-size:1.8rem;margin-bottom:16px}
+.emporter-text p{font-size:1rem;font-weight:300;margin-bottom:14px;line-height:1.8}
+.emporter-img img{width:100%;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+
+/* CONTACT */
+.contact{background:var(--noir);color:var(--creme);padding:70px 24px}
+.contact h2{color:var(--creme);text-align:center;font-size:1.9rem;margin-bottom:12px}
+.contact .line{width:50px;height:3px;background:var(--orange);margin:0 auto 30px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center;margin-top:40px}
+.contact-item{padding:25px}
+.contact-item svg{width:36px;height:36px;fill:var(--orange);margin-bottom:14px}
+.contact-item h3{color:var(--orange);font-size:0.8rem;font-family:'Source Sans 3',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.contact-item p{font-weight:300;font-size:0.95rem;line-height:1.8}
+.contact-item a{color:rgba(255,249,242,0.85);text-decoration:none;transition:color 0.3s}
+.contact-item a:hover{color:var(--orange)}
+
+/* FOOTER */
+.footer{background:#0D0505;padding:30px 24px;text-align:center;color:rgba(255,249,242,0.35);font-size:0.8rem;font-weight:300}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header-inner{flex-direction:column;gap:10px}
+  nav a{margin:0 10px;font-size:0.8rem}
+  .hero{height:70vh;min-height:400px}
+  .hero h1{font-size:2rem}
+  .pres-content{grid-template-columns:1fr;text-align:center}
+  .pres-img{order:-1}
+  .pres-badges{justify-content:center}
+  .prest-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr}
+  .equipe-content{grid-template-columns:1fr}
+  .equipe-photo{text-align:center}
+  .equipe-photo img{max-width:220px}
+  .emporter-content{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  section{padding:60px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+<div class="header-inner">
+  <div class="header-logo">
+    <img src="img/logo.png" alt="Logo Solignat Traiteur" height="52">
+    <div class="header-name">Solignat Traiteur<span>Traiteur proche de Clermont-Ferrand</span></div>
+  </div>
+  <nav>
+    <a href="#prestations">Prestations</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#equipe">L'entreprise</a>
+    <a href="#emporter">Plats à emporter</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+  <div class="hero-tagline">Traiteur de réception — Puy-de-Dôme (63)</div>
+  <h1>La cuisine auvergnate au service de <em>vos événements</em></h1>
+  <p class="hero-sub">Solignat Traiteur accompagne particuliers, entreprises et associations dans l'organisation de leurs réceptions, avec une cuisine généreuse et soignée.</p>
+  <a href="#contact" class="hero-cta">Demander un devis</a>
+  <div class="hero-badge">Chanat-la-Mouteyre — Proche Clermont-Ferrand</div>
+</div>
+</section>
+
+<!-- PRESENTATION -->
+<section class="presentation" id="presentation">
+<div class="container">
+  <div class="pres-content">
+    <div class="pres-img">
+      <img src="img/logo.png" alt="Logo Solignat Traiteur" width="200">
+    </div>
+    <div class="pres-text">
+      <div class="line"></div>
+      <h2>Votre traiteur en Puy-de-Dôme</h2>
+      <p>Installé à <strong>Chanat-la-Mouteyre</strong>, aux portes de Clermont-Ferrand, Solignat Traiteur intervient sur tout le Puy-de-Dôme et les départements voisins pour vos réceptions et événements.</p>
+      <p>Notre équipe de <strong>plus de 10 professionnels</strong> met son savoir-faire au service de chaque événement : mariages, séminaires, repas de famille, assemblées générales ou cocktails. Des produits frais, une cuisine maison et un service adapté à vos besoins.</p>
+      <div class="pres-badges">
+        <div class="pres-badge">Puy-de-Dôme (63)</div>
+        <div class="pres-badge">10+ collaborateurs</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PRESTATIONS -->
+<section class="prestations" id="prestations">
+<div class="container">
+  <div class="section-title">
+    <div class="line"></div>
+    <h2>Nos prestations</h2>
+    <p>Une offre complète pour tous vos événements, adaptée à chaque occasion</p>
+  </div>
+  <div class="prest-grid">
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+      <h3>Particuliers</h3>
+      <p>Anniversaires, communions, baptêmes, repas de famille. Des menus sur mesure pour chaque occasion, préparés avec des produits frais et de saison.</p>
+    </div>
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M11 2c3.56 0 6.57 2.36 7.55 5.6A6 6 0 0 1 18 19H6A6 6 0 0 1 6.45 7.6C7.43 4.36 10.44 2 14 2m-3 0H11zm1 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2zM6 21h12v1H6v-1z"/></svg></div>
+      <h3>Mariages</h3>
+      <p>Cocktails, repas assis ou buffets pour votre jour J. Nous créons avec vous un menu qui reflète vos goûts, du vin d'honneur au dessert.</p>
+    </div>
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg></div>
+      <h3>Entreprises</h3>
+      <p>Cocktails dînatoires, pauses gourmandes, séminaires et repas d'affaires. Une restauration soignée qui reflète l'image de votre entreprise.</p>
+    </div>
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+      <h3>Associations</h3>
+      <p>Assemblées générales, banquets, soirées de gala. Des formules adaptées aux collectivités, avec un rapport qualité-prix maîtrisé.</p>
+    </div>
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/></svg></div>
+      <h3>Buffets et cocktails</h3>
+      <p>Buffets chauds et froids, verrines, mises en bouche et planches de charcuterie. Une présentation soignée pour des saveurs généreuses.</p>
+    </div>
+    <div class="prest-card">
+      <div class="prest-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+      <h3>Plats à emporter</h3>
+      <p>Une sélection de plats cuisinés à emporter, préparés chaque jour. Cuisine traditionnelle et spécialités auvergnates, prêtes à déguster.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- GALERIE -->
+<section class="galerie" id="galerie">
+<div class="container">
+  <div class="section-title">
+    <div class="line"></div>
+    <h2>Nos réalisations</h2>
+    <p>Quelques créations de notre cuisine, préparées avec des produits frais et locaux</p>
+  </div>
+  <div class="gal-grid">
+    <div class="gal-item">
+      <img src="img/buffet-cocktail.jpg" alt="Buffet cocktail salé froid — Solignat Traiteur" width="600" height="280">
+      <div class="gal-caption"><strong>Cocktail</strong>Buffet froid : verrines, charcuterie et fromages d'Auvergne</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/brasero-viande.jpg" alt="Pièce de viande au brasero — Solignat Traiteur" width="600" height="280">
+      <div class="gal-caption"><strong>Brasero</strong>Pièce de viande grillée au feu de bois, découpée devant les convives</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/cocktail-lucie.jpg" alt="Cocktail dînatoire élégant — Solignat Traiteur" width="600" height="280">
+      <div class="gal-caption"><strong>Réception</strong>Cocktail dînatoire avec mise en scène soignée</div>
+    </div>
+    <div class="gal-item">
+      <img src="img/jambon-sec.jpg" alt="Découpe de jambon sec — Solignat Traiteur" width="600" height="280">
+      <div class="gal-caption"><strong>Charcuterie</strong>Découpe de jambon sec à la main, produits du terroir</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- EQUIPE -->
+<section class="equipe" id="equipe">
+<div class="container">
+  <div class="equipe-content">
+    <div class="equipe-photo">
+      <img src="img/team.jpg" alt="Équipe Solignat Traiteur" width="280">
+    </div>
+    <div class="equipe-text">
+      <div class="line"></div>
+      <h2>Une équipe à votre service</h2>
+      <p>Dirigée par <strong>Jean-François Solignat</strong>, l'entreprise s'appuie sur une équipe de plus de dix professionnels passionnés par la cuisine et le service.</p>
+      <p>Chaque événement est préparé avec le même soin : des <strong>produits frais</strong>, une cuisine maison et une organisation sans faille. Du premier contact jusqu'au dernier service, nous vous accompagnons pour faire de votre réception un moment réussi.</p>
+      <p>Basés à Chanat-la-Mouteyre, nous intervenons sur <strong>tout le Puy-de-Dôme</strong> et au-delà : Clermont-Ferrand, Riom, Volvic, Chaîne des Puys et l'ensemble de l'Auvergne.</p>
+      <div class="equipe-stats">
+        <div class="equipe-stat"><div class="number">10+</div><div class="label">Collaborateurs</div></div>
+        <div class="equipe-stat"><div class="number">63</div><div class="label">Puy-de-Dôme</div></div>
+        <div class="equipe-stat"><div class="number">100%</div><div class="label">Fait maison</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PLATS A EMPORTER -->
+<section class="emporter" id="emporter">
+<div class="container">
+  <div class="emporter-content">
+    <div class="emporter-text">
+      <div class="line"></div>
+      <h2>Plats à emporter</h2>
+      <p>En complément de nos prestations traiteur, nous proposons une sélection de <strong>plats cuisinés à emporter</strong>, préparés chaque jour dans notre laboratoire.</p>
+      <p>Cuisine traditionnelle auvergnate, spécialités de saison, entrées, plats et desserts : retrouvez notre savoir-faire directement chez vous, sans occasion particulière.</p>
+      <p>Renseignements et commandes au <strong><a href="tel:+33473621108" style="color:var(--orange);text-decoration:none">04 73 62 11 08</a></strong>.</p>
+    </div>
+    <div class="emporter-img">
+      <img src="img/plat-particuliers.jpg" alt="Plats à emporter — Solignat Traiteur" width="500">
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container">
+  <h2>Contactez-nous</h2>
+  <div class="line"></div>
+  <p style="text-align:center;color:rgba(255,249,242,0.7);font-weight:300;max-width:500px;margin:0 auto;">Pour un devis personnalisé ou toute demande d'information, nous sommes à votre écoute.</p>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <h3>Téléphone</h3>
+      <p><a href="tel:+33473621108">04 73 62 11 08</a></p>
+    </div>
+    <div class="contact-item">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      <h3>Email</h3>
+      <p><a href="mailto:contact@solignat-traiteur.fr">contact@solignat-traiteur.fr</a></p>
+    </div>
+    <div class="contact-item">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      <h3>Adresse</h3>
+      <p>Chanat-la-Mouteyre<br>63530, Puy-de-Dôme</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 Solignat Traiteur — Chanat-la-Mouteyre (63). Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
